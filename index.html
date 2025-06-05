@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cilia & Yves's Wedding</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+        .calligraphy { font-family: 'Dancing Script', cursive; }
+        .slideshow { animation: zoomIn 20s infinite; }
+        @keyframes zoomIn { 0% { transform: scale(1); } 100% { transform: scale(1.2); } }
+        .nav-link:hover { color: #f0f0f0; }
+        /* Hamburger menu icon */
+        .hamburger { display: none; }
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .nav-links.active {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                width: 100%;
+                background: rgba(0, 0, 0, 0.8);
+            }
+            .nav-links.active a { padding: 10px; text-align: center; }
+            .hamburger { display: block; cursor: pointer; }
+            .nav-links:not(.active) { display: none !important; }
+        }
+    </style>
+</head>
+<body class="bg-gray-100 font-sans">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-10">
+        <div class="max-w-7xl mx-auto px-4 flex justify-between items-center py-4">
+            <div class="text-3xl calligraphy text-white">Cilia & Yves</div>
+            <div class="hamburger md:hidden">
+                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </div>
+            <div class="nav-links flex space-x-8 md:flex">
+                <a href="#home" class="nav-link text-white font-semibold px-3 py-2 rounded transition">Home</a>
+                <a href="#program" class="nav-link text-white font-semibold px-3 py-2 rounded transition">Program</a>
+                <a href="#details" class="nav-link text-white font-semibold px-3 py-2 rounded transition">Details</a>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSe76WkkA9P6ysKE5Sq5cT11UYzfbySTJM7S6lI7wYtzykjlgg/viewform" class="nav-link text-white font-semibold px-3 py-2 rounded transition" target="_blank">RSVP</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Slideshow -->
+    <section id="home" class="h-screen relative overflow-hidden">
+        <div class="slideshow-container">
+            <div class="slideshow absolute inset-0 bg-cover bg-center" style="background-image: url('image9.png'); object-position: top;"></div>
+            <div class="slideshow absolute inset-0 bg-cover bg-center opacity-0" style="background-image: url('image10.png'); object-position: top; animation-delay: 10s;"></div>
+        </div>
+        <div class="absolute inset-0 bg-black bg-opacity-50 flex items-end justify-end">
+            <div class="text-white p-8 text-right">
+                <h1 class="text-4xl md:text-5xl calligraphy">Cilia & Yves</h1>
+                <p class="text-xl mt-2">Join us for a day of love and celebration</p>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSe76WkkA9P6ysKE5Sq5cT11UYzfbySTJM7S6lI7wYtzykjlgg/viewform" target="_blank" class="mt-4 inline-block bg-white text-black px-6 py-3 rounded-lg font-semibold hover:bg-gray-200">RSVP Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Welcome Section -->
+    <section class="py-16 px-4 md:px-16 bg-white relative">
+        <div class="max-w-4xl mx-auto flex flex-col md:flex-row items-start">
+            <div class="md:w-1/2 -ml-4 md:-ml-12">
+                <img src="polaroid1.png" alt="Couple polaroid 1" class="w-full h-auto max-h-[1200px] object-contain">
+            </div>
+            <div class="md:w-1/2 mt-8 md:mt-0 flex flex-col items-center relative z-10">
+                <div class="flex flex-col items-center">
+                    <h2 class="text-5xl calligraphy text-gray-800 mb-4">August 23, 2025</h2>
+                    <p class="text-lg text-gray-700 text-center">Cavilli Estate, Strand Rd, Somerset West, Cape Town, 7129</p>
+                </div>
+                <img src="polaroid2.png" alt="Couple polaroid 2" class="w-3/4 h-auto max-h-[1200px] object-contain mt-4">
+            </div>
+        </div>
+        <div class="absolute bottom-0 left-0 w-full h-32 bg-[#f3e8d6]"></div>
+    </section>
+
+    <!-- Program Section -->
+    <section id="program" class="py-16 px-4 md:px-16 bg-gray-100">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-4xl font-serif text-center mb-12">Program</h2>
+            <div class="border-2 border-black p-6 rounded-lg">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="flex flex-col items-center text-center">
+                        <!-- Custom SVG for Ceremony -->
+                        <div class="w-8 h-8 mb-2">
+                            <svg class="w-8 h-8 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                        </div>
+                        <p class="text-2xl font-semibold">1:00 PM</p>
+                        <p class="text-lg text-gray-700">Ceremony</p>
+                        <p class="text-sm text-gray-700">Cavilli Estate, Strand Rd, Somerset West, Cape Town, 7129</p>
+                    </div>
+                    <div class="flex flex-col items-center text-center">
+                        <!-- Custom SVG for Pre-Drinks -->
+                        <div class="w-8 h-8 mb-2">
+                            <svg class="w-8 h-8 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2v16z"></path>
+                            </svg>
+                        </div>
+                        <p class="text-2xl font-semibold">3:00 PM</p>
+                        <p class="text-lg text-gray-700">Pre-Drinks</p>
+                        <p class="text-sm text-gray-700">Cavilli Estate, Strand Rd, Somerset West, Cape Town, 7129</p>
+                    </div>
+                    <div class="flex flex-col items-center text-center">
+                        <!-- Custom SVG for Reception -->
+                        <div class="w-8 h-8 mb-2">
+                            <svg class="w-8 h-8 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 19v-8.93a2 2 0 01.89-1.664l7-4.666a2 2 0 012.22 0l7 4.666A2 2 0 0121 10.07V19M3 19a2 2 0 002 2h14a2 2 0 002-2M12 3v18"></path>
+                            </svg>
+                        </div>
+                        <p class="text-2xl font-semibold">6:00 PM</p>
+                        <p class="text-lg text-gray-700">Reception</p>
+                        <p class="text-sm text-gray-700">Cavilli Estate, Strand Rd, Somerset West, Cape Town, 7129</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Love Story Section -->
+    <section class="py-16 px-4 md:px-16 bg-[#8b4513] relative">
+        <div class="max-w-4xl mx-auto flex flex-col md:flex-row">
+            <div class="md:w-1/2 text-white md:pl-12">
+                <h2 class="text-4xl calligraphy mb-8">Our Love Story</h2>
+                <p class="text-lg leading-relaxed">
+                    Our journey began when we met on Instagram in 2022, and we started dating in 2023. During our first date, I wore a ring on my engagement finger, and he expressed his intentions by saying he would one day put a ring on that finger. He even playfully asked me to remove the existing ring. Initially, I was taken aback by his forwardness, and I thought it might be our first and last date, as I wasn't looking for a relationship at the time. However, as we spent more time together, we developed a deep connection and transitioned into a serious relationship. A year after we started dating, on October 12th, he proposed to me – a memorable moment that came just two days after my birthday. Now, we're eagerly looking forward to exchanging our vows on August 23, 2025.
+                </p>
+            </div>
+            <div class="md:w-1/2 absolute right-0 top-0 h-full">
+                <img src="IMG_8580.jpg" alt="Couple photo" class="w-full h-full object-cover">
+            </div>
+        </div>
+    </section>
+
+    <!-- Important Details Section -->
+    <section id="details" class="py-16 px-4 md:px-16 bg-gray-100">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-4xl font-serif mb-12">Important Details</h2>
+            <div class="space-y-12">
+                <div>
+                    <img src="polaroid3.png" alt="Gift polaroid" class="mx-auto w-64 h-auto object-contain mb-4">
+                    <h3 class="text-2xl font-semibold">Gift Preference</h3>
+                    <p class="text-lg text-gray-700 leading-relaxed mt-4">
+                        Your presence is the greatest gift, but if you wish to contribute, we kindly request cash gifts to help us build our future together.
+                    </p>
+                </div>
+                <div>
+                    <img src="polaroid4.png" alt="Dress code polaroid" class="mx-auto w-64 h-auto object-contain mb-4">
+                    <h3 class="text-2xl font-semibold">Dress Code</h3>
+                    <p class="text-lg text-gray-700 leading-relaxed mt-4">
+                        The more dramatic, the better! Embrace bold and extravagant styles to celebrate our special day.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 bg-[#8b4513] text-white text-center">
+        <p>Contact us at: <a href="mailto:ciliaandyves@example.com" class="underline">ciliaandyves@example.com</a></p>
+        <p class="mt-2">© 2025 Cilia & Yves. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Slideshow animation
+        const slides = document.querySelectorAll('.slideshow');
+        let currentSlide = 0;
+        function showSlide() {
+            slides.forEach((slide, index) => {
+                slide.style.opacity = index === currentSlide ? 1 : 0;
+            });
+            currentSlide = (currentSlide + 1) % slides.length;
+            setTimeout(showSlide, 10000); // Change slide every 10 seconds
+        }
+        showSlide();
+
+        // Hamburger menu toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
